@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :sessions
   get '*path', to: 'application#error_404'
+  root to: 'users#new'
 end
