@@ -1,5 +1,6 @@
-<h1>Sign up</h1>
+<div  class="fullheight" style="background-image:url(/images/signup_image.png)" />
 
+<h1>Sign up</h1>
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
@@ -26,3 +27,4 @@
 
   <%= f.submit "Create my account" %>
 <% end %>
+</div>

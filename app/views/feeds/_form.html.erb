@@ -27,6 +27,7 @@
     <!-- 確認画面から新規作成画面に戻った時に、 -->
     <!-- アップロードした画像を表示させるための記述 -->
     <%= image_tag(@feed.image.url(:thumb)) if @feed.image && @feed.image.url %>
+    <br>
     <%= form.file_field :image %>
     <%= form.hidden_field :image_cache %>
   </div>
@@ -38,4 +39,4 @@
 <% end %>
 
 <br>
-<%= link_to "一覧画面にもどる", feeds_path %>
+<%= link_to "Back", feeds_path %>

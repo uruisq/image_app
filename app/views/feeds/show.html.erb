@@ -1,9 +1,11 @@
+<div  class="fullheight" style="background-image:url(/images/show_image.png)" />
+
 <h1>Showing Feed</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @feed.image.url %>
+<strong>Image:</strong>
+<div><%= link_to image_tag(@feed.image.thumb.url), @feed.image.url %></div>
 </p>
 <p>投稿者：<%= @feed.user.name %></p>
 <p>タイトル：<%= @feed.title %></p>
@@ -11,3 +13,5 @@
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
 <%= link_to 'Back', feeds_path %>
+
+</div>
