@@ -28,6 +28,8 @@ class FeedsController < ApplicationController
   end
 
   def show
+    @comments = @feed.comments
+    @comment = @feed.comments.build
   end
 
   def confirm
